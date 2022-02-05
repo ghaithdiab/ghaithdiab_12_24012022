@@ -16,7 +16,7 @@ const Text=styled.p`
   font-size:10px;
   margin-top:10px
 `
-const CustomToolTip=({active, payload})=>{
+const CustomActivityToolTip=({active, payload})=>{
     if(active){
       return (
         <Container>
@@ -28,9 +28,9 @@ const CustomToolTip=({active, payload})=>{
 
 }
 
-export default CustomToolTip
+export default CustomActivityToolTip
 
-CustomToolTip.propTypes={
+CustomActivityToolTip.propTypes={
   active:PropTypes.bool,
   payload:PropTypes.array
 }

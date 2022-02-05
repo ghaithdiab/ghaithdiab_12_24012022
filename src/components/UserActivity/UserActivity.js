@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { getUserActivity } from "../../service/data";
 import {BarChart, CartesianGrid, Tooltip, XAxis, YAxis,Bar} from 'recharts'
 import styled from "styled-components";
-import CustomToolTip from "../CustomToolTip/CustomToolTip";
+import CustomActivityToolTip from "../CustomActivityToolTip/CustomActivityToolTip";
 
 const Acitivty=styled.div`
   width:853px;
@@ -11,6 +11,7 @@ const Acitivty=styled.div`
   background-color:#FBFBFB;
   padding:20px;
   border-radius:5px;
+  margin-bottom:30px;
 `
 const Head=styled.div`
   display:flex;
@@ -74,7 +75,7 @@ const UserActivity=()=>{
         <XAxis dataKey="day" tickLine={false} tick={{fontSize:14,storke:"#9B9EAC"}}/>
         <YAxis yAxisId="kilogram" dataKey="kilogram" type="number" domain={['dataMin-2','dataMax+1']} tickCount="3" tickLine={false} axisLine={false}tick={{fontSize: 14, stroke:'#9B9EAC'}} orientation={"right"} dx={15}/>
         <YAxis yAxisId="calories" dataKey="calories" type="number" domain={['dataMin - 20', 'dataMax + 10']} hide={true}/>
-        <Tooltip content={<CustomToolTip/>}/>
+        <Tooltip content={<CustomActivityToolTip/>}/>
         <Bar yAxisId="kilogram" dataKey="kilogram" fill="#282D30" barSize={7} radius={[50, 50, 0, 0]}/>
         <Bar yAxisId="calories" dataKey="calories" fill="#E60000" barSize={7} radius={[50, 50, 0, 0]}/>
       </BarChart>

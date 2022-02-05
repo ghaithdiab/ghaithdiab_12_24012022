@@ -20,3 +20,12 @@ export const getUserActivity=async(id)=>{
     console.log(e)
   }
 }
+export const getAverageSessions=async(id)=>{
+  try{
+    const req=await axios.get(`http://localhost:3000/user/${id}/average-sessions`)
+    return req.data
+  }
+  catch(e){
+    console.log(e)
+  }
+}
