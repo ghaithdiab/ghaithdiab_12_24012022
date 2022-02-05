@@ -7,6 +7,7 @@ import UserName from '../components/UserName/UserName'
 import { getUserInfo } from '../service/data'
 import UserActivity from '../components/UserActivity/UserActivity'
 import AverageDurationSessions from '../components/AverageDurationSessions/AverageDurationSessions'
+import UserPerformance from '../components/UserPerformance/UserPerformance'
 const Content = styled.div`
   display: flex;
   justify-content: spce-between;
@@ -21,6 +22,9 @@ const Container=styled.div`
 const ContainerLeft=styled.div`
   display:flex;
   flex-direction:column;
+`
+const Cards=styled.div`
+  display:flex;
 `
 const ContainerRight=styled.div`
   display:flex;
@@ -48,7 +52,10 @@ const UserPage = () => {
           <Container>
             <ContainerLeft>
               <UserActivity/>
+              <Cards>
               <AverageDurationSessions/>
+              <UserPerformance/>
+              </Cards>
             </ContainerLeft>
             <ContainerRight></ContainerRight>
           </Container>
