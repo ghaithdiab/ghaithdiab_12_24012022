@@ -5,6 +5,7 @@ import NavVerticale from '../components/NavVerticale/NavVerticale'
 import { useParams } from 'react-router-dom'
 import UserName from '../components/UserName/UserName'
 import { getUserInfo } from '../service/data'
+import UserActivity from '../components/UserActivity/UserActivity'
 const Content = styled.div`
   display: flex;
   justify-content: spce-between;
@@ -12,6 +13,18 @@ const Content = styled.div`
 const Info = styled.div`
   width: 80%;
   margin: 30px auto;
+`
+const Container=styled.div`
+  display:flex;
+`
+const ContainerLeft=styled.div`
+  display:flex;
+  flex-direction:column;
+  width:80%;
+`
+const ContainerRight=styled.div`
+  display:flex;
+  flex-direction:column;
 `
 const UserPage = () => {
   const [data, setData] = useState([])
@@ -32,6 +45,12 @@ const UserPage = () => {
         <NavVerticale />
         <Info>
           <UserName name={data.userInfos.firstName} />
+          <Container>
+            <ContainerLeft>
+              <UserActivity/>
+            </ContainerLeft>
+            <ContainerRight></ContainerRight>
+          </Container>
         </Info>
       </Content>
     </div>
