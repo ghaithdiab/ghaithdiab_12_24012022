@@ -30,7 +30,7 @@ Build a user profile page in React, fetching data from a NodeJS external server.
 
 - Go to the project folder
 
-`cd maevanguyenanhphuong_12_27012021`
+`cd ghaithdiab_12_24012022`
 
 - Install the packages
 
