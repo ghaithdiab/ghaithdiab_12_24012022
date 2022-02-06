@@ -8,6 +8,7 @@ import { getUserInfo } from '../service/data'
 import UserActivity from '../components/UserActivity/UserActivity'
 import AverageDurationSessions from '../components/AverageDurationSessions/AverageDurationSessions'
 import UserPerformance from '../components/UserPerformance/UserPerformance'
+import UserScore from '../components/UserScore/UserScore'
 const Content = styled.div`
   display: flex;
   justify-content: spce-between;
@@ -25,6 +26,7 @@ const ContainerLeft=styled.div`
 `
 const Cards=styled.div`
   display:flex;
+  justify-content: space-between;
 `
 const ContainerRight=styled.div`
   display:flex;
@@ -55,6 +57,7 @@ const UserPage = () => {
               <Cards>
               <AverageDurationSessions/>
               <UserPerformance/>
+              <UserScore data={data}/>
               </Cards>
             </ContainerLeft>
             <ContainerRight></ContainerRight>
