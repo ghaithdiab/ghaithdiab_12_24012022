@@ -9,6 +9,11 @@ import UserActivity from '../components/UserActivity/UserActivity'
 import AverageDurationSessions from '../components/AverageDurationSessions/AverageDurationSessions'
 import UserPerformance from '../components/UserPerformance/UserPerformance'
 import UserScore from '../components/UserScore/UserScore'
+import CardsVerticale from '../components/CardsVerticale/CardVerticale'
+import chesseburger from '../assets/cheeseburger.svg'
+import PathCopy from '../assets/PathCopy.png'
+import Path from '../assets/Path.png'
+import Path1 from '../assets/Path1.png'
 const Content = styled.div`
   display: flex;
   justify-content: spce-between;
@@ -19,6 +24,7 @@ const Info = styled.div`
 `
 const Container=styled.div`
   display:flex;
+  justify-content: space-between;
 `
 const ContainerLeft=styled.div`
   display:flex;
@@ -31,6 +37,7 @@ const Cards=styled.div`
 const ContainerRight=styled.div`
   display:flex;
   flex-direction:column;
+  justify-content: space-between;
 `
 const UserPage = () => {
   const [data, setData] = useState([])
@@ -60,7 +67,12 @@ const UserPage = () => {
               <UserScore data={data}/>
               </Cards>
             </ContainerLeft>
-            <ContainerRight></ContainerRight>
+            <ContainerRight>
+              <CardsVerticale icon={Path} info={`${data.keyData.calorieCount}kCal`} text='Calories' bkColor='#FBEAEA'></CardsVerticale>
+              <CardsVerticale icon={Path1}info={`${data.keyData.proteinCount}g`} text='Proteines' bkColor='#E8F4FB'></CardsVerticale>
+              <CardsVerticale icon={PathCopy} info={`${data.keyData.carbohydrateCount}g`} text='Glucides' bkColor='#FBF3E0'></CardsVerticale>
+              <CardsVerticale icon={chesseburger} info={`${data.keyData.lipidCount}g`} text='Lipides'bkColor='#F9E1E6'></CardsVerticale>
+            </ContainerRight>
           </Container>
         </Info>
       </Content>

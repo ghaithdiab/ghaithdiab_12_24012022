@@ -12,15 +12,14 @@ const Container = styled.div`
   position: relative;
 `
 const Title = styled.h2`
-  position: absolute; 
-  top:8%;
-  left:12%;
+  position: absolute;
+  top: 8%;
+  left: 12%;
   font-family: Roboto;
   font-size: 15px;
   font-weight: 500;
-  margin-bottom:0;
+  margin-bottom: 0;
   color: rgba(32, 37, 58, 1);
-
 `
 const Text = styled.p`
   position: absolute;
@@ -44,15 +43,22 @@ const UserScore = ({ data }) => {
       <ResponsiveContainer>
         <PieChart>
           <Pie data={score} innerRadius={80} dataKey="value" startAngle={90}>
-          {score.map((entry, index) => (
-                    index === 0 
-                     ?  <Cell key={`cell-${index}`} cornerRadius={10} fill="#ff0000"/>
-                     :  <Cell key={`cell-${index}`} fill="#ffffff"/>
-                ))}
+            {score.map((entry, index) =>
+              index === 0 ? (
+                <Cell key={`cell-${index}`} cornerRadius={10} fill="#ff0000" />
+              ) : (
+                <Cell key={`cell-${index}`} fill="#ffffff" />
+              )
+            )}
           </Pie>
         </PieChart>
       </ResponsiveContainer>
-      <Text>{score[0].value*100}%<br/>de Votre<br/>objectif</Text>
+      <Text>
+        {score[0].value * 100}%<br />
+        de Votre
+        <br />
+        objectif
+      </Text>
     </Container>
   )
 }
