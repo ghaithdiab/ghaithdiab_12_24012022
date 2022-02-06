@@ -22,23 +22,28 @@ const Info = styled.div`
   width: 80%;
   margin: 30px auto;
 `
-const Container=styled.div`
-  display:flex;
+const Container = styled.div`
+  display: flex;
   justify-content: space-between;
 `
-const ContainerLeft=styled.div`
-  display:flex;
-  flex-direction:column;
+const ContainerLeft = styled.div`
+  display: flex;
+  flex-direction: column;
 `
-const Cards=styled.div`
-  display:flex;
+const Cards = styled.div`
+  display: flex;
   justify-content: space-between;
 `
-const ContainerRight=styled.div`
-  display:flex;
-  flex-direction:column;
+const ContainerRight = styled.div`
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
 `
+
+/**
+ * render User Page
+ * @returns {JSX}
+ */
 const UserPage = () => {
   const [data, setData] = useState([])
   const { id } = useParams()
@@ -60,18 +65,38 @@ const UserPage = () => {
           <UserName name={data.userInfos.firstName} />
           <Container>
             <ContainerLeft>
-              <UserActivity/>
+              <UserActivity />
               <Cards>
-              <AverageDurationSessions/>
-              <UserPerformance/>
-              <UserScore data={data}/>
+                <AverageDurationSessions />
+                <UserPerformance />
+                <UserScore data={data} />
               </Cards>
             </ContainerLeft>
             <ContainerRight>
-              <CardsVerticale icon={Path} info={`${data.keyData.calorieCount}kCal`} text='Calories' bkColor='#FBEAEA'></CardsVerticale>
-              <CardsVerticale icon={Path1}info={`${data.keyData.proteinCount}g`} text='Proteines' bkColor='#E8F4FB'></CardsVerticale>
-              <CardsVerticale icon={PathCopy} info={`${data.keyData.carbohydrateCount}g`} text='Glucides' bkColor='#FBF3E0'></CardsVerticale>
-              <CardsVerticale icon={chesseburger} info={`${data.keyData.lipidCount}g`} text='Lipides'bkColor='#F9E1E6'></CardsVerticale>
+              <CardsVerticale
+                icon={Path}
+                info={`${data.keyData.calorieCount}kCal`}
+                text="Calories"
+                bkColor="#FBEAEA"
+              ></CardsVerticale>
+              <CardsVerticale
+                icon={Path1}
+                info={`${data.keyData.proteinCount}g`}
+                text="Proteines"
+                bkColor="#E8F4FB"
+              ></CardsVerticale>
+              <CardsVerticale
+                icon={PathCopy}
+                info={`${data.keyData.carbohydrateCount}g`}
+                text="Glucides"
+                bkColor="#FBF3E0"
+              ></CardsVerticale>
+              <CardsVerticale
+                icon={chesseburger}
+                info={`${data.keyData.lipidCount}g`}
+                text="Lipides"
+                bkColor="#F9E1E6"
+              ></CardsVerticale>
             </ContainerRight>
           </Container>
         </Info>

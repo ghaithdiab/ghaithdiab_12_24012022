@@ -4,6 +4,7 @@ import Group3 from '../../assets/Group3.png'
 import Group from '../../assets/Group.png'
 import Vector from '../../assets/Vector.png'
 import Vector1 from '../../assets/Vector1.png'
+
 const VerticaleMenu = styled.div`
   width: 110px;
   height: 1024px;
@@ -37,6 +38,11 @@ const BtnsGroup = styled.div`
   width: 64px;
   margin: auto;
 `
+
+/**
+ * render Nav Vertical component
+ * @returns {JSX}
+ */
 const NavVerticale = () => {
   return (
     <VerticaleMenu>

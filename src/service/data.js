@@ -1,6 +1,10 @@
 import axios from 'axios'
 
-
+/**
+ * Get User Info
+ * @param {id} user id 
+ * @returns {object}
+ */
 export const getUserInfo=async(id)=>{
     try{
       const res=await axios.get(`http://localhost:3000/user/${id}`)
@@ -11,6 +15,11 @@ export const getUserInfo=async(id)=>{
     }
 }
 
+/**
+ * Get User Activity
+ * @param {id} User id 
+ * @returns {object}
+ */
 export const getUserActivity=async(id)=>{
   try{
       const req=await axios.get(`http://localhost:3000/user/${id}/activity`)
@@ -20,6 +29,12 @@ export const getUserActivity=async(id)=>{
     console.log(e)
   }
 }
+
+/**
+ * Get User Average Duration sessions
+ * @param {id} User id 
+ * @returns {object} 
+ */
 export const getAverageSessions=async(id)=>{
   try{
     const req=await axios.get(`http://localhost:3000/user/${id}/average-sessions`)
@@ -30,6 +45,11 @@ export const getAverageSessions=async(id)=>{
   }
 }
 
+/**
+ * Get user Performances
+ * @param {id} User id
+ * @returns {object}
+ */
 export const getPerformances=async(id)=>{
   try{
     const req=await axios.get(`http://localhost:3000/user/${id}/performance`)

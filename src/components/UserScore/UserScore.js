@@ -32,6 +32,12 @@ const Text = styled.p`
   text-align: center;
   color: #74798c;
 `
+
+/**
+ * render User Score component with data
+ * @param {data} object
+ * @returns {JSX}
+ */
 const UserScore = ({ data }) => {
   const score = [
     { value: data.todayScore || data.score },

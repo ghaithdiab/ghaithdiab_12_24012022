@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import propTypes from 'prop-types'
+
 const Container = styled.div`
   width: 258px;
   height: 124px;
@@ -38,6 +39,15 @@ const Text = styled.p`
   font-weight: 500;
   color: rgba(116, 121, 140, 1);
 `
+/**
+ * render Card Vertical with Data
+ * @param {icon} img
+ * @param {info} string
+ * @param {text} string
+ * @param {bkColor} string
+ * @returns {JSX}
+ */
+
 const CardsVerticale = ({ icon, info, text, bkColor }) => {
   return (
     <Container>
