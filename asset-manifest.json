@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/ghaithdiab_12_24012022/static/js/main.9d31d05b.js",
+    "main.js": "/ghaithdiab_12_24012022/static/js/main.f8a34cb5.js",
     "static/js/787.cfdbb516.chunk.js": "/ghaithdiab_12_24012022/static/js/787.cfdbb516.chunk.js",
     "static/media/logo.png": "/ghaithdiab_12_24012022/static/media/logo.337e8febecea24c0c4b1.png",
     "static/media/cheeseburger.svg": "/ghaithdiab_12_24012022/static/media/cheeseburger.18f60e0efe37e86bcac036d673f0bab0.svg",
     "index.html": "/ghaithdiab_12_24012022/index.html",
-    "main.9d31d05b.js.map": "/ghaithdiab_12_24012022/static/js/main.9d31d05b.js.map",
+    "main.f8a34cb5.js.map": "/ghaithdiab_12_24012022/static/js/main.f8a34cb5.js.map",
     "787.cfdbb516.chunk.js.map": "/ghaithdiab_12_24012022/static/js/787.cfdbb516.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.9d31d05b.js"
+    "static/js/main.f8a34cb5.js"
   ]
 }
